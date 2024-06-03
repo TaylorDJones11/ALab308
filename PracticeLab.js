@@ -1,3 +1,4 @@
+/// Fizz Buzz ////
 // Loop through all numbers from 1 to 100.
 // If a number is divisible by 3, log “Fizz.”
 // If a number is divisible by 5, log “Buzz.”
@@ -15,3 +16,35 @@ for (let i = 1; i <= 100; i++) {
     console.log(i);
   }
 }
+
+/// Prime Time ////
+
+const n = 5;
+let currentNumber = n + 1;
+let isPrime = false;
+
+while (true) {
+  isPrime = true;
+
+  // Check if currentNumber is prime
+  if (currentNumber <= 1) {
+    isPrime = false;
+  } else {
+    for (let i = 2; i <= Math.sqrt(currentNumber); i++) {
+      if (currentNumber % i === 0) {
+        isPrime = false;
+        break;
+      }
+    }
+  }
+
+  // If currentNumber is prime, print it and break the loop
+  if (isPrime) {
+    console.log(currentNumber);
+    break;
+  }
+
+  currentNumber++;
+}
+
+/// Feeling Loopy ///
